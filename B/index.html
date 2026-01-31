@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Balok Teknik Sipil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1 class="title">Kalkulator Reaksi Balok - SFD BMD NFD</h1>
+
+  <div class="layout">
+
+    <!-- PANEL DIAGRAM (KIRI ATAS) -->
+    <div class="box diagram-box">
+      <h3>Diagram Balok</h3>
+      <img src="images/balok.png" class="diagram" alt="Diagram Balok">
+    </div>
+
+    <!-- PANEL INPUT (KANAN ATAS) -->
+    <div class="box input-box">
+      <h3>Input Data</h3>
+
+      <div class="inputs-grid">
+        <input id="LCD" placeholder="LCD (m)">
+        <input id="LDA" placeholder="LDA (m)">
+        <input id="LAE" placeholder="LAE (m)">
+        <input id="LEF" placeholder="LEF (m)">
+        <input id="LFB" placeholder="LFB (m)">
+
+        <input id="P1" placeholder="P1 (ton)">
+        <input id="P2" placeholder="P2 (ton)">
+        <input id="P3" placeholder="P3 (ton)">
+        <input id="Q" placeholder="Q (ton/m)">
+      </div>
+
+      <button type="button" onclick="hitung()">HITUNG</button>
+    </div>
+
+    <!-- PANEL OUTPUT (BAGIAN BAWAH) -->
+    <div class="box result-box">
+      <h3>Output</h3>
+
+      <div class="result-grid">
+
+        <!-- RAV + RBV -->
+        <div class="result-section">
+          <h4>Reaksi Tumpuan</h4>
+          <p>RAV: <span id="RAV">0.0000</span></p>
+          <p>RBV: <span id="RBV">0.0000</span></p>
+        </div>
+
+        <!-- SFD -->
+        <div class="result-section">
+          <h4>SFD</h4>
+          <p>DC1: <span id="DC1">0.0000</span></p>
+          <p>DC2: <span id="DC2">0.0000</span></p>
+          <p>DD1: <span id="DD1">0.0000</span></p>
+          <p>DD2: <span id="DD2">0.0000</span></p>
+          <p>DA1: <span id="DA1">0.0000</span></p>
+          <p>DA2: <span id="DA2">0.0000</span></p>
+          <p>DE1: <span id="DE1">0.0000</span></p>
+          <p>DE2: <span id="DE2">0.0000</span></p>
+          <p>DF1: <span id="DF1">0.0000</span></p>
+          <p>DF2: <span id="DF2">0.0000</span></p>
+          <p>DB1: <span id="DB1">0.0000</span></p>
+          <p>DB2: <span id="DB2">0.0000</span></p>
+        </div>
+
+        <!-- NFD -->
+        <div class="result-section">
+          <h4>NFD</h4>
+          <p>NA: <span id="NA">0.0000</span></p>
+          <p>NB: <span id="NB">0.0000</span></p>
+          <p>NC: <span id="NC">0.0000</span></p>
+          <p>ND: <span id="ND">0.0000</span></p>
+          <p>NE: <span id="NE">0.0000</span></p>
+          <p>NF: <span id="NF">0.0000</span></p>
+        </div>
+
+        <!-- BMD -->
+        <div class="result-section">
+          <h4>BMD</h4>
+          <p>MA: <span id="MA">0.0000</span></p>
+          <p>MB: <span id="MB">0.0000</span></p>
+          <p>MC: <span id="MC">0.0000</span></p>
+          <p>MD: <span id="MD">0.0000</span></p>
+          <p>ME: <span id="ME">0.0000</span></p>
+          <p>MF: <span id="MF">0.0000</span></p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
