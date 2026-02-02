@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  margin: 0;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+}
+
+/* =========================
+   BOX
+========================= */
+
+.box {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   ACCENT
+========================= */
+
+.diagram-box {
+  border-left: 5px solid #1976d2;
+}
+
+.input-box {
+  border-right: 5px solid #1976d2;
+}
+
+.result-box {
+  border-left: 5px solid #1976d2;
+  border-right: 5px solid #1976d2;
+}
+
+/* =========================
+   DIAGRAM
+========================= */
+
+.diagram-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.diagram-box h3 {
+  width: 100%;
+  margin-top: 0;
+}
+
+.diagram {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.inputs-grid input {
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid #cfd8dc;
+  background: #eef5ff;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ERROR INPUT */
+
+.input-error {
+  border: 2px solid red !important;
+  background: #ffecec;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #125aa0;
+}
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-box {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* =========================
+   OUTPUT
+========================= */
+
+.result-box {
+  grid-column: 1 / 3;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.result-section {
+  background: #f7f9fc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.result-section h4 {
+  margin-top: 0;
+}
+
+.result-section p {
+  margin: 6px 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .result-box {
+    grid-column: auto;
+  }
+
+  .inputs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram {
+    max-width: 100%;
+  }
+
+}

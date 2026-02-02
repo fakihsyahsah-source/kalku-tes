@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Reaksi Balok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">Kalkulator Reaksi Balok - SFD BMD NFD</h1>
+
+<div class="layout">
+
+  <!-- DIAGRAM -->
+  <div class="box diagram-box">
+    <h3>Diagram Balok</h3>
+    <img src="images/balok c.png" class="diagram" alt="Diagram Balok">
+  </div>
+
+  <!-- INPUT -->
+  <div class="box input-box">
+    <h3>Input Data</h3>
+
+    <div class="inputs-grid">
+
+      <input id="LAB" placeholder="LAB (m)">
+      <input id="LBC" placeholder="LBC (m)">
+      <input id="LAC" placeholder="LAC (m)">
+
+      <input id="P1" placeholder="P (ton)">
+      <input id="Q" placeholder="q (ton/m)">
+
+    </div>
+
+    <button onclick="hitung()">HITUNG</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="box result-box">
+    <h3>Output</h3>
+
+    <div class="result-grid">
+
+      <div class="result-section">
+        <h4>Reaksi Tumpuan</h4>
+        <p>RAV: <span id="RAV">0.0000</span></p>
+      </div>
+
+      <div class="result-section">
+        <h4>SFD</h4>
+        <p>DA1: <span id="DA1">0.0000</span></p>
+        <p>DA2: <span id="DA2">0.0000</span></p>
+        <p>DB: <span id="DB">0.0000</span></p>
+        <p>DC1: <span id="DC">0.0000</span></p>
+        <p>DC2: <span id="DD1">0.0000</span></p>
+      </div>
+
+      <div class="result-section">
+        <h4>NFD</h4>
+        <p>NA: <span id="NA">0.0000</span></p>
+        <p>NB: <span id="NB">0.0000</span></p>
+        <p>NC: <span id="NC">0.0000</span></p>
+      </div>
+
+      <div class="result-section">
+        <h4>BMD</h4>
+        <p>MA: <span id="MA">0.0000</span></p>
+        <p>MB: <span id="MB">0.0000</span></p>
+        <p>MC: <span id="MC">0.0000</span></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

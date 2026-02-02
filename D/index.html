@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Reaksi Balok</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 class="title">Kalkulator Reaksi Balok</h1>
+
+<div class="layout">
+
+    <!-- DIAGRAM -->
+  <div class="box diagram-box">
+    <h3>Diagram Balok</h3>
+    <img src="images/balok d.png" class="diagram" alt="Diagram Balok">
+  </div>
+
+  <!-- INPUT -->
+  <div class="box input-box">
+    <h3>Input Data</h3>
+
+    <div class="inputs-grid">
+      <input id="lac" type="number" step="any" placeholder="LAC (m)">
+      <input id="lcd" type="number" step="any" placeholder="LCD (m)">
+      <input id="lde" type="number" step="any" placeholder="LDE (m)">
+      <input id="leb" type="number" step="any" placeholder="LEB (m)">
+
+      <input id="p1" type="number" step="any" placeholder="P1 (ton)">
+      <input id="p2" type="number" step="any" placeholder="P2 (ton)">
+      <input id="q"  type="number" step="any" placeholder="q (ton/m)">
+    </div>
+
+    <button onclick="hitung()">HITUNG</button>
+
+    <div id="errorBox" class="error-box"></div>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="box result-box">
+    <h3>Output</h3>
+
+    <div class="result-grid">
+
+      <div class="result-section">
+        <h4>Reaksi</h4>
+        <p>RAV: <span id="rav">0.0000</span></p>
+        <p>RBV: <span id="rbv">0.0000</span></p>
+        <p>Kontrol: <span id="kontrol">0.0000</span></p>
+      </div>
+
+      <div class="result-section">
+        <h4>SFD</h4>
+        <p>DA1: <span id="da1">0.0000</span></p>
+        <p>DA2: <span id="da2">0.0000</span></p>
+        <p>DC1: <span id="dc1">0.0000</span></p>
+        <p>DC2: <span id="dc2">0.0000</span></p>
+        <p>DD1: <span id="dd1">0.0000</span></p>
+        <p>DD2: <span id="dd2">0.0000</span></p>
+        <p>DE1: <span id="de1">0.0000</span></p>
+        <p>DE2: <span id="de2">0.0000</span></p>
+        <p>DB1: <span id="db1">0.0000</span></p>
+        <p>DB2: <span id="db2">0.0000</span></p>
+      </div>
+
+      <div class="result-section">
+        <h4>BMD</h4>
+        <p>MA: <span id="ma">0.0000</span></p>
+        <p>MC: <span id="mc">0.0000</span></p>
+        <p>MD: <span id="md">0.0000</span></p>
+        <p>ME: <span id="me">0.0000</span></p>
+        <p>MB: <span id="mb">0.0000</span></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
